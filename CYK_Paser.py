@@ -8,13 +8,24 @@ Github: https://github.com/ikergarcia1996
 '''
 # Initialize the grammar and read the rules from a file
 g = Grammar('example_grammar1.txt')
+
 # Parse a sentence
 g.parse('astronomers saw stars with ears')
+
 # Print the table used for parsing the sentence
 g.print_parse_table()
-# Get the trees generated for the sentence
+
+# Get the list of trees generated for the sentence
 trees = g.get_trees()
- 
+
+# Get the result of the production rule, VP, S, NP... 
+p = trees[0].get_type
+
+# Get the left child of the production rule
+l = trees[0].get_left
+
+# Get the right child of the production rule
+d = trees[0].get_right
 '''
 
  ## Expected output
@@ -35,14 +46,14 @@ NP --> telescope
 NP --> stars
 P --> with
 
-RULE applied: VP[2,2] --> V[1,2] NP[1,3]
-RULE applied: PP[2,4] --> P[1,4] NP[1,5]
-RULE applied: S[3,1] --> NP[1,1] VP[2,2]
-RULE applied: NP[3,3] --> NP[1,3] PP[2,4]
-RULE applied: VP[4,2] --> V[1,2] NP[3,3]
-RULE applied: VP[4,2] --> VP[2,2] PP[2,4]
-RULE applied: S[5,1] --> NP[1,1] VP[4,2]
-RULE applied: S[5,1] --> NP[1,1] VP[4,2]
+Applied Rule: VP[2,2] --> V[1,2] NP[1,3]
+Applied Rule: PP[2,4] --> P[1,4] NP[1,5]
+Applied Rule: S[3,1] --> NP[1,1] VP[2,2]
+Applied Rule: NP[3,3] --> NP[1,3] PP[2,4]
+Applied Rule: VP[4,2] --> V[1,2] NP[3,3]
+Applied Rule: VP[4,2] --> VP[2,2] PP[2,4]
+Applied Rule: S[5,1] --> NP[1,1] VP[4,2]
+Applied Rule: S[5,1] --> NP[1,1] VP[4,2]
 ----------------------------------------
 The sentence IS accepted in the language
 Number of possible trees: 2
@@ -56,7 +67,6 @@ Number of possible trees: 2
 ['NP']       ['NP', 'V']   ['NP']  ['P']   ['NP']
 astronomers  saw           stars   with    ears
 -----------  ------------  ------  ------  ------
-
 '''
 
 
@@ -103,7 +113,7 @@ class production_rule(object):
         self.p1 = p1
         self.p2 = p2
     
-    #Returns the rest of the production rule, VP, S, NP... 
+    #Returns the result of the production rule, VP, S, NP... 
     @property
     def get_type(self):
         return self.result
@@ -224,7 +234,7 @@ class Grammar(object):
                                     
                             if r is not None:
                                 for w in r:
-                                    print('RULE applied: ' + str(w) + '[' + str(l) + ',' + str(s) + ']' + ' --> ' + str(a.get_type) + '[' + str(p) + ',' + str(s) + ']' + ' ' + str(b.get_type)+ '[' + str(l-p) + ',' + str(s+p) + ']')
+                                    print('Applied Rule: ' + str(w) + '[' + str(l) + ',' + str(s) + ']' + ' --> ' + str(a.get_type) + '[' + str(p) + ',' + str(s) + ']' + ' ' + str(b.get_type)+ '[' + str(l-p) + ',' + str(s+p) + ']')
                                     self.parse_table[l-1][s-1].add_production(w,a,b)
                                
         self.number_of_trees = len(self.parse_table[self.length-1][0].get_types)
