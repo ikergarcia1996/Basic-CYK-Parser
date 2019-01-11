@@ -6,10 +6,14 @@ Github: https://github.com/ikergarcia1996
 # Example Of Use
  
 '''
- g = Grammar('example_grammar1.txt')
- g.parse('astronomers saw stars with ears')
- g.print_parse_table()
- trees = g.get_trees()
+# Initialize the grammar and read the rules from a file
+g = Grammar('example_grammar1.txt')
+# Parse a sentence
+g.parse('astronomers saw stars with ears')
+# Print the table used for parsing the sentence
+g.print_parse_table()
+# Get the trees generated for the sentence
+trees = g.get_trees()
  
 '''
 
