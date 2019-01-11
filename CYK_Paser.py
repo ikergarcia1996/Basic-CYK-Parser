@@ -121,12 +121,12 @@ class production_rule(object):
     #Returns the left child of the production rule
     @property
     def get_left(self):
-        return p1
+        return self.p1
     
     #Returns the right child of the production rule
     @property
     def get_right(self):
-        return p2
+        return self.p2
 
 class Cell(object):
     productions = []
