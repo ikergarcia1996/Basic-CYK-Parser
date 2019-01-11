@@ -80,7 +80,7 @@ astronomers  saw           stars   with    ears
 ```
 
 # Example of grammar file
-The program assumes that the grammar is a valid context-free grammar in CNF form. Rules must be separated by lines. 
+The program assumes that the grammar is a valid context-free grammar in CNF form (https://www.tutorialspoint.com/automata_theory/chomsky_normal_form.htm). Rules must be separated by lines. 
 ```
 S -> NP VP
 PP -> P NP
