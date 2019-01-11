@@ -56,14 +56,14 @@ NP --> telescope
 NP --> stars
 P --> with
 
-RULE applied: VP[2,2] --> V[1,2] NP[1,3]
-RULE applied: PP[2,4] --> P[1,4] NP[1,5]
-RULE applied: S[3,1] --> NP[1,1] VP[2,2]
-RULE applied: NP[3,3] --> NP[1,3] PP[2,4]
-RULE applied: VP[4,2] --> V[1,2] NP[3,3]
-RULE applied: VP[4,2] --> VP[2,2] PP[2,4]
-RULE applied: S[5,1] --> NP[1,1] VP[4,2]
-RULE applied: S[5,1] --> NP[1,1] VP[4,2]
+Applied Rule: VP[2,2] --> V[1,2] NP[1,3]
+Applied Rule: PP[2,4] --> P[1,4] NP[1,5]
+Applied Rule: S[3,1] --> NP[1,1] VP[2,2]
+Applied Rule: NP[3,3] --> NP[1,3] PP[2,4]
+Applied Rule: VP[4,2] --> V[1,2] NP[3,3]
+Applied Rule: VP[4,2] --> VP[2,2] PP[2,4]
+Applied Rule: S[5,1] --> NP[1,1] VP[4,2]
+Applied Rule: S[5,1] --> NP[1,1] VP[4,2]
 ----------------------------------------
 The sentence IS accepted in the language
 Number of possible trees: 2
@@ -78,7 +78,6 @@ Number of possible trees: 2
 astronomers  saw           stars   with    ears
 -----------  ------------  ------  ------  ------
 ```
-
 
 # Example of grammar file
 The program assumes that the grammar is a valid context-free grammar in CNF form. Rules must be separated by lines. 
