@@ -11,7 +11,7 @@ This is a basic CYK Parser implemented in Python. This parser has been implement
 
 # Author
 ```
-Iker García Ferrero
+Iker García Ferrero - ikergarcia1996
 ```
 # Example Of Use
  
