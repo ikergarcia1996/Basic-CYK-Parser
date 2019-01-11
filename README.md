@@ -1,4 +1,4 @@
-This is a basic CYK Parser implemented in Python. This parser has been implemented for the "Computational Linguistics: Morphology and Syntax" course of the Language Analysis and Processing Master (http://ixa.si.ehu.es/master/?lang=en).
+This is a basic CYK Parser implemented in Python 3. This parser has been implemented for the "Computational Linguistics: Morphology and Syntax" course of the Language Analysis and Processing Master (http://ixa.si.ehu.es/master/?lang=en).
 
 # Files in the repository
 
