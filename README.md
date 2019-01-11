@@ -1,5 +1,14 @@
 This is a basic CYK Parser implemented in Python. This parser has been implemented for the "Computational Linguistics: Morphology and Syntax" course of the Language Analysis and Processing Master (http://ixa.si.ehu.es/master/?lang=en).
 
+# Files in the repository
+
+1. CYK_Parser.ipyn: Parser in jupyter notebook format
+2. CYK_Parser.ipyn: Parser in .py format
+3. example.py: Some examples of use (usage: python3 example.py)
+4. example_output.txt: output of the example.py script in txt format
+5. example_grammar*.txt: Some example grammars
+
+
 ### Author
 ```
 Iker García Ferrero
