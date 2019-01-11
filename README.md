@@ -17,13 +17,19 @@ Iker García Ferrero
  
 ```
 # Initialize the grammar and read the rules from a file
- g = Grammar('example_grammar1.txt')
- # Parse a sentence
- g.parse('astronomers saw stars with ears')
- # Print the table used for parsing the sentence
- g.print_parse_table()
- # Get the trees generated for the sentence
- trees = g.get_trees()
+g = Grammar('example_grammar1.txt')
+# Parse a sentence
+g.parse('astronomers saw stars with ears')
+# Print the table used for parsing the sentence
+g.print_parse_table()
+# Get the list of trees generated for the sentence
+trees = g.get_trees()
+# Get the result of the production rule, VP, S, NP... 
+p = trees[0].get_type
+# Get the left child of the production rule
+l = trees[0].get_left
+# Get the right child of the production rule
+d = trees[0].get_right
 ```
 
  ## Expected output
