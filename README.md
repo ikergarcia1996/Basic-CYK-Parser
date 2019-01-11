@@ -9,7 +9,7 @@ This is a basic CYK Parser implemented in Python. This parser has been implement
 5. example_grammar*.txt: Some example grammars
 
 
-### Author
+# Author
 ```
 Iker García Ferrero
 ```
